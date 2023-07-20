@@ -8,10 +8,10 @@ const app = createApp({
             tasks: []
         }
     },
-    created(){
-        axios.get('localhost/php-todo-list-json/api/index.php/tasks/')
+    created() {
+        axios.get('http://localhost/php-todo-list-json/api/index.php/tasks/')
         .then(res => {
-            console.log(res.data)
+            this.tasks = res.data;
         })
     }
 });
