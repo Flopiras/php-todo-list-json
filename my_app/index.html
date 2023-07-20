@@ -35,7 +35,7 @@
                     </div>
                     <ul class="list-group list-group-flush">
 
-                        <li v-for="task in tasks" class="list-group-item">{{task}}</li>
+                        <li v-for="task in tasks" :key="task.id" class="list-group-item">{{task.text}}</li>
                     </ul>
                 </div>
             </div>
