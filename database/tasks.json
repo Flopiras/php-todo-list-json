@@ -1,1 +1,14 @@
-["comprare il latte", "dare da mangiare al coccodrillo", "preparare la torta"]
+[
+    {
+        "text": "comprare il latte",
+        "id" : 1
+    },
+    {
+        "text": "dare da mangiare al coccodrillo",
+        "id" : 2
+    },
+    {
+        "text": "preparare la torta",
+        "id" : 3
+    }
+]
