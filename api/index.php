@@ -9,13 +9,23 @@ $json_data = file_get_contents($database_path);
 $tasks = json_decode($json_data, true);
 
 // preparo una variabile per ricevere i dati in POST
-$new_task_text = $_POST['task'] ?? null;
+$new_task_text = $_POST['task'] ?? NULL;
 
 // se ricevo qualcosa 
 if ($new_task_text) {
 
+    // funzione per assegnare un nuovo id
+    $last_id = $tasks[count($tasks) - 1]['id'];
+    $new_id = $last_id + 1;
+
     // preparo l'oggetto da pushare
-    $new_task = ['text' = $new_task_text, 'id' = get_new_id()];
+    $new_task = ['text' => $new_task_text, 'id' => $new_id];
+
+    // aggiungo il nuovo oggetto all'array di tasks
+    $tasks[] = $new_task;
+
+    $json_tasks = json_encode($tasks);
+    file_put_contents($database_path, $json_tasks);
 }
 
 header('Content-Type: application/json');
