@@ -33,10 +33,19 @@
                     <div class="card-header">
                         Todo List:
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush mb-2">
 
                         <li v-for="task in tasks" :key="task.id" class="list-group-item">{{task.text}}</li>
                     </ul>
+
+                    <!-- form -->
+                    <form class="m-2">
+                        <div class="mb-3">
+                            <label for="new_task" class="form-label">Aggiungi una nuova task</label>
+                            <input type="email" class="form-control" id="new_task">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Aggiungi</button>
+                    </form>
                 </div>
             </div>
         </main>
