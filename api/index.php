@@ -15,8 +15,7 @@ $new_task_text = $_POST['task'] ?? NULL;
 if ($new_task_text) {
 
     // funzione per assegnare un nuovo id
-    $last_id = $tasks[count($tasks) - 1]['id'];
-    $new_id = $last_id + 1;
+    $new_id = count($tasks) + 1;
 
     // preparo l'oggetto da pushare
     $new_task = ['text' => $new_task_text, 'id' => $new_id];
