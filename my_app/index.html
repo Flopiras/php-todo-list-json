@@ -22,7 +22,6 @@
     <!-- vuejs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- script -->
-    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -39,7 +38,7 @@
                     </ul>
 
                     <!-- form -->
-                    <form class="m-2">
+                    <form @submit.prevent class="m-2">
                         <div class="mb-3">
                             <label for="new_task" class="form-label">Aggiungi una nuova task</label>
                             <input v-model.trim="newTask" type="text" class="form-control" id="new_task"
@@ -51,6 +50,7 @@
             </div>
         </main>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

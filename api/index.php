@@ -9,7 +9,8 @@ $json_data = file_get_contents($database_path);
 $tasks = json_decode($json_data, true);
 
 // preparo una variabile per ricevere i dati in POST
-$new_task_text = $_POST['task'] ?? NULL;
+$new_task_text = $_POST['text'] ?? NULL;
+// var_dump($_POST, $_GET);
 
 // se ricevo qualcosa 
 if ($new_task_text) {
