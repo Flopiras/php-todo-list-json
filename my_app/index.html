@@ -42,9 +42,10 @@
                     <form class="m-2">
                         <div class="mb-3">
                             <label for="new_task" class="form-label">Aggiungi una nuova task</label>
-                            <input type="text" class="form-control" id="new_task" placeholder="Nuova task...">
+                            <input v-model.trim="newTask" type="text" class="form-control" id="new_task"
+                                placeholder="Nuova task...">
                         </div>
-                        <button type="submit" class="btn btn-primary">Aggiungi</button>
+                        <button @click="addNewTask" type="submit" class="btn btn-primary">Aggiungi</button>
                     </form>
                 </div>
             </div>
